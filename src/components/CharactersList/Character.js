@@ -1,5 +1,5 @@
 import React from "react";
-import { Column, Notification, Title } from "rbx";
+import { Column, Section, Title } from "rbx";
 
 import { Link } from "react-router-dom";
 
@@ -7,15 +7,27 @@ const Character = props => {
   const character = props.character;
   const imgUrl = `${character.thumbnail.path}.${character.thumbnail.extension}`;
   return (
-    <Column size={3}>
+    <Column size={3} className="character">
       <Link to={`/character/${character.id}`}>
-        <Notification color="dark" textAlign="centered">
-          <Title size={4}>{character.name}</Title>
-          <p>
+        <Section
+          className="toto"
+          backgroundColor="dark"
+          textAlign="centered"
+          style={{
+            padding: "1rem",
+            color: "white",
+            borderRadius: "2px",
+            opacity: "1"
+          }}
+        >
+          <Title size={4} style={{ color: "white" }}>
+            {character.name}
+          </Title>
+          <div style={{ margin: "0px auto" }}>
             <img src={imgUrl} alt={character.name} />
-          </p>
+          </div>
           <p>{character.description}</p>
-        </Notification>
+        </Section>
       </Link>
     </Column>
   );

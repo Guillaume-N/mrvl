@@ -4,7 +4,6 @@ import { Column } from "rbx";
 import Character from "./Character";
 
 function CharactersList(props) {
-  console.log(props);
   return (
     <Column.Group className="heroes-list" multiline style={{ margin: "20px" }}>
       {props.characters.map(c => (

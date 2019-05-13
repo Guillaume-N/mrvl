@@ -11,7 +11,7 @@ const Header = () => {
             <Link to="/">Marvel Characters</Link>
           </Title>
           <Title as="h2" subtitle>
-            All your favorites Marvel heroes in one place
+            All your favorites Marvel characters in one place
           </Title>
         </Container>
       </Hero.Body>

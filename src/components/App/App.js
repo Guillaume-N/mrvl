@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 
 import CharactersList from "../CharactersList";
-import Header from "../Header";
 
 import { getCharacters } from "../../utils/API_calls";
 
@@ -22,7 +21,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
         {this.state.characters && (
           <CharactersList characters={this.state.characters} />
         )}

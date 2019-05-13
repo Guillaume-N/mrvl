@@ -6,12 +6,14 @@ import "rbx/index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import App from "./components/App";
+import Header from "./components/Header";
 import CharacterDetails from "./components/CharacterDetails";
 
 const Root = () => {
   return (
     <BrowserRouter>
       <div>
+        <Header />
         <Switch>
           <Route exact path="/character/:id" component={CharacterDetails} />
           <Route exact path="/" component={App} />
