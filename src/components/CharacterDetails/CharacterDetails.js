@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getCharacterDetails } from "../../utils/API_calls";
 import { Column, Box, Title, Section } from "rbx";
 import Loader from "../Loader";
+import Breadcrumb from "../Breadcrumb";
 
 class CharacterDetails extends Component {
   state = {
@@ -27,7 +28,10 @@ class CharacterDetails extends Component {
       `${character.thumbnail.path}.${character.thumbnail.extension}`;
 
     return this.state.loaded ? (
-      <Column.Group style={{ margin: "10px" }}>
+      <Column.Group multiline style={{ margin: "10px" }}>
+        <Column size={12}>
+          <Breadcrumb text={character.name} />
+        </Column>
         <Column size={7}>
           <Box>
             <Title as="h1" size={3} spaced>

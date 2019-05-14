@@ -7,26 +7,22 @@ const Character = props => {
   const character = props.character;
   const imgUrl = `${character.thumbnail.path}.${character.thumbnail.extension}`;
   return (
-    <Column size={3} className="character">
+    <Column size={3}>
       <Link to={`/character/${character.id}`}>
-        <Section
-          className="toto"
-          backgroundColor="dark"
-          textAlign="centered"
-          style={{
-            padding: "1rem",
-            color: "white",
-            borderRadius: "2px",
-            opacity: "1"
-          }}
-        >
-          <Title size={4} style={{ color: "white" }}>
+        <Section className="character">
+          <Title size={3} style={{ color: "white" }}>
             {character.name}
           </Title>
           <div style={{ margin: "0px auto" }}>
-            <img src={imgUrl} alt={character.name} />
+            <img
+              src={imgUrl}
+              alt={character.name}
+              style={{ width: "200px", height: "200px", borderRadius: "5px" }}
+            />
           </div>
-          <p>{character.description}</p>
+          {
+            // <p>{character.description}</p>
+          }
         </Section>
       </Link>
     </Column>

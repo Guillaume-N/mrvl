@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Hero color="dark">
+    <Hero color="danger" className="header">
       <Hero.Body>
         <Container>
-          <Title>
-            <Link to="/">Marvel Characters</Link>
+          <Title style={{ fontSize: "4rem" }}>
+            <Link to="/" className="main-title">
+              MARVEL CHARACTERS
+            </Link>
           </Title>
           <Title as="h2" subtitle>
             All your favorites Marvel characters in one place
