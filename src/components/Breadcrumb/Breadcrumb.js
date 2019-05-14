@@ -1,21 +1,21 @@
 import React from "react";
-import { Breadcrumb, Notification, Column } from "rbx";
+import { Breadcrumb as BulmaBreadcrumb, Notification, Column } from "rbx";
 import { Link } from "react-router-dom";
 import "./Breadcrumb.css";
 
-function BreadcrumbNav(props) {
+function Breadcrumb(props) {
   return (
-    <Column size={12}>
+    <Column size={props.size}>
       <Notification className="breadcrumb-nav">
-        <Breadcrumb separator="arrow" size="medium">
-          <Breadcrumb.Item>
+        <BulmaBreadcrumb separator="arrow" size="medium">
+          <BulmaBreadcrumb.Item>
             <Link to={`/`}>Home</Link>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item active>{props.text}</Breadcrumb.Item>
-        </Breadcrumb>
+          </BulmaBreadcrumb.Item>
+          <BulmaBreadcrumb.Item active>{props.text}</BulmaBreadcrumb.Item>
+        </BulmaBreadcrumb>
       </Notification>
     </Column>
   );
 }
 
-export default BreadcrumbNav;
+export default Breadcrumb;

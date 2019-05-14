@@ -5,9 +5,9 @@ import * as serviceWorker from "./serviceWorker";
 import "rbx/index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import App from "./components/App";
 import Header from "./components/Header";
 import CharacterDetails from "./components/CharacterDetails";
+import CharactersList from "./components/CharactersList";
 
 const Root = () => {
   return (
@@ -16,8 +16,8 @@ const Root = () => {
         <Header />
         <Switch>
           <Route exact path="/character/:id" component={CharacterDetails} />
-          <Route exact path="/" component={App} />
-          <Route component={App} />
+          <Route exact path="/" component={CharactersList} />
+          <Route component={CharactersList} />
         </Switch>
       </div>
     </BrowserRouter>

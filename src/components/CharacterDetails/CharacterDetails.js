@@ -31,7 +31,7 @@ class CharacterDetails extends Component {
 
     return this.state.loaded ? (
       <Column.Group multiline className="column-group">
-        <Breadcrumb text={character.name} />
+        <Breadcrumb size={12} text={character.name} />
         <CharacterImageAndDescription character={character} imgUrl={imgUrl} />
         {character.comics && <CharacterComics character={character} />}
       </Column.Group>
