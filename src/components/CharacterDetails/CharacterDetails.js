@@ -34,7 +34,7 @@ class CharacterDetails extends Component {
         </Column>
         <Column size="two-thirds">
           <Notification className="box-character">
-            <Title as="h1" size={3} spaced style={{ color: "#FFC107" }}>
+            <Title as="h2" size={2} style={{ color: "#FFC107" }}>
               {character.name}
             </Title>
             <div
@@ -57,7 +57,7 @@ class CharacterDetails extends Component {
         {character.comics && (
           <Column>
             <Notification className="box-character-comics">
-              <Title as="h3" size={3} style={{ color: "#FFC107" }}>
+              <Title as="h2" size={2} style={{ color: "#FFC107" }}>
                 Featured in:
               </Title>
               <Title as="h5" size={5}>

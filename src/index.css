@@ -42,6 +42,10 @@ html {
   letter-spacing: -5pt;
 }
 
+.subtitle {
+  letter-spacing: 1.5pt;
+}
+
 .comics-list {
   text-indent: 1rem;
 }

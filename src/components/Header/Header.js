@@ -12,7 +12,7 @@ const Header = () => {
               MARVEL CHARACTERS
             </Link>
           </Title>
-          <Title as="h2" subtitle>
+          <Title as="h2" subtitle className="subtitle">
             All your favorites Marvel characters in one place
           </Title>
         </Container>
