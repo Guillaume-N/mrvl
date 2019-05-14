@@ -17,6 +17,18 @@ html {
   opacity: 0.7;
 }
 
+.box-character,
+.box-character-comics,
+.breadcrumb-nav {
+  background: rgba(81, 140, 202, 0.8) !important;
+  color: white !important;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.breadcrumb-nav .breadcrumb li + li::before {
+  color: white;
+}
+
 .header {
   font-family: "Titillium Web", sans-serif;
   background: #f44336 !important;
@@ -28,4 +40,8 @@ html {
 
 .main-title {
   letter-spacing: -5pt;
+}
+
+.comics-list {
+  text-indent: 1rem;
 }

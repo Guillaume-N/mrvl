@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getCharacterDetails } from "../../utils/API_calls";
-import { Column, Box, Title, Section } from "rbx";
+import { Column, Title, Section, Notification } from "rbx";
 import Loader from "../Loader";
 import Breadcrumb from "../Breadcrumb";
 
@@ -32,39 +32,37 @@ class CharacterDetails extends Component {
         <Column size={12}>
           <Breadcrumb text={character.name} />
         </Column>
-        <Column size={7}>
-          <Box>
-            <Title as="h1" size={3} spaced>
+        <Column size="two-thirds">
+          <Notification className="box-character">
+            <Title as="h1" size={3} spaced style={{ color: "#FFC107" }}>
               {character.name}
             </Title>
             <div
               style={{
-                maxHeight: "400px",
-                width: "400px",
                 margin: "0 auto",
                 textAlign: "center"
               }}
             >
-              <p>
-                <img
-                  src={imgUrl}
-                  alt={character.name}
-                  style={{ borderRadius: "10px" }}
-                />
-              </p>
+              <img
+                src={imgUrl}
+                alt={character.name}
+                style={{ borderRadius: "10px" }}
+              />
             </div>
-            <Section>{character.description}</Section>
-          </Box>
+            {character.description && (
+              <Section>{character.description}</Section>
+            )}
+          </Notification>
         </Column>
         {character.comics && (
-          <Column size={5}>
-            <Box>
-              <Title as="h3" size={3}>
+          <Column>
+            <Notification className="box-character-comics">
+              <Title as="h3" size={3} style={{ color: "#FFC107" }}>
                 Featured in:
               </Title>
               <Title as="h5" size={5}>
                 {character.name} appears in{" "}
-                <span style={{ color: "green" }}>
+                <span style={{ color: "#FFC107" }}>
                   {character.comics.available}
                 </span>{" "}
                 comics.
@@ -72,12 +70,12 @@ class CharacterDetails extends Component {
               <Title as="h6" size={6}>
                 The first 3 comics he appears in are:
               </Title>
-              <ul>
+              <ul className="comics-list">
                 {character.comics.items.slice(0, 3).map(comic => {
                   return <li key={comic.name}>{comic.name}</li>;
                 })}
               </ul>
-            </Box>
+            </Notification>
           </Column>
         )}
       </Column.Group>

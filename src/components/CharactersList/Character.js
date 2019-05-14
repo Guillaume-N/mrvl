@@ -10,7 +10,7 @@ const Character = props => {
     <Column size={3}>
       <Link to={`/character/${character.id}`}>
         <Section className="character">
-          <Title size={3} style={{ color: "white" }}>
+          <Title size={3} style={{ color: "#FFC107" }}>
             {character.name}
           </Title>
           <div style={{ margin: "0px auto" }}>
