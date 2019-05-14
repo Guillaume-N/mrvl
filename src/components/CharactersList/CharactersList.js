@@ -6,8 +6,8 @@ import "./CharactersList.css";
 function CharactersList(props) {
   return (
     <Column.Group className="characters-list" multiline>
-      {props.characters.map(c => (
-        <Character character={c} key={c.id} />
+      {props.characters.map(character => (
+        <Character character={character} key={character.id} />
       ))}
     </Column.Group>
   );
