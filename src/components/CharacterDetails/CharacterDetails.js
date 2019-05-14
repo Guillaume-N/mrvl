@@ -3,6 +3,7 @@ import { getCharacterDetails } from "../../utils/API_calls";
 import { Column, Title, Section, Notification } from "rbx";
 import Loader from "../Loader";
 import Breadcrumb from "../Breadcrumb";
+import "./CharacterDetails.css";
 
 class CharacterDetails extends Component {
   state = {
@@ -28,25 +29,20 @@ class CharacterDetails extends Component {
       `${character.thumbnail.path}.${character.thumbnail.extension}`;
 
     return this.state.loaded ? (
-      <Column.Group multiline style={{ margin: "10px" }}>
+      <Column.Group multiline className="column-group">
         <Column size={12}>
           <Breadcrumb text={character.name} />
         </Column>
         <Column size="two-thirds">
           <Notification className="box-character">
-            <Title as="h2" size={2} style={{ color: "#FFC107" }}>
+            <Title as="h2" size={2} className="details-main-title">
               {character.name}
             </Title>
-            <div
-              style={{
-                margin: "0 auto",
-                textAlign: "center"
-              }}
-            >
+            <div className="character-image-container">
               <img
+                className="character-image"
                 src={imgUrl}
                 alt={character.name}
-                style={{ borderRadius: "10px" }}
               />
             </div>
             {character.description && (
@@ -57,24 +53,28 @@ class CharacterDetails extends Component {
         {character.comics && (
           <Column>
             <Notification className="box-character-comics">
-              <Title as="h2" size={2} style={{ color: "#FFC107" }}>
+              <Title as="h2" size={2} className="details-main-title">
                 Featured in:
               </Title>
               <Title as="h5" size={5}>
                 {character.name} appears in{" "}
-                <span style={{ color: "#FFC107" }}>
+                <span className="number-of-comics">
                   {character.comics.available}
                 </span>{" "}
                 comics.
               </Title>
-              <Title as="h6" size={6}>
-                The first 3 comics he appears in are:
-              </Title>
-              <ul className="comics-list">
-                {character.comics.items.slice(0, 3).map(comic => {
-                  return <li key={comic.name}>{comic.name}</li>;
-                })}
-              </ul>
+              {character.comics.items.length > 0 && (
+                <>
+                  <Title as="h6" size={6}>
+                    The first 3 comics he appears in are:
+                  </Title>
+                  <ul className="comics-list">
+                    {character.comics.items.slice(0, 3).map(comic => {
+                      return <li key={comic.name}>{comic.name}</li>;
+                    })}
+                  </ul>
+                </>
+              )}
             </Notification>
           </Column>
         )}

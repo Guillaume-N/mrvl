@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import "./App.css";
-
+import { getCharacters } from "../../utils/API_calls";
 import CharactersList from "../CharactersList";
 import Loader from "../Loader";
-
-import { getCharacters } from "../../utils/API_calls";
 
 class App extends Component {
   state = {
@@ -19,6 +16,8 @@ class App extends Component {
         loaded: true
       });
     });
+
+    document.title = "Marvel Characters";
   }
 
   render() {

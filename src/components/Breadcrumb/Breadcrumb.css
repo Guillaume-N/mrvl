@@ -1,0 +1,9 @@
+.breadcrumb-nav {
+  font-family: "Titillium Web", sans-serif;
+  color: #fff;
+  background: rgba(81, 140, 202, 0.8);
+}
+
+.breadcrumb-nav .breadcrumb li + li::before {
+  color: #fff;
+}

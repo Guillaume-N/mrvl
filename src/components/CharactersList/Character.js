@@ -1,7 +1,7 @@
 import React from "react";
 import { Column, Section, Title } from "rbx";
-
 import { Link } from "react-router-dom";
+import "./Character.css";
 
 const Character = props => {
   const character = props.character;
@@ -10,19 +10,16 @@ const Character = props => {
     <Column size={3}>
       <Link to={`/character/${character.id}`}>
         <Section className="character">
-          <Title size={3} style={{ color: "#FFC107" }}>
+          <Title size={3} className="character-name">
             {character.name}
           </Title>
-          <div style={{ margin: "0px auto" }}>
+          <div className="character-list-image-container">
             <img
+              className="character-list-image"
               src={imgUrl}
               alt={character.name}
-              style={{ width: "200px", height: "200px", borderRadius: "5px" }}
             />
           </div>
-          {
-            // <p>{character.description}</p>
-          }
         </Section>
       </Link>
     </Column>

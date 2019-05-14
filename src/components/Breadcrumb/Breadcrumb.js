@@ -1,6 +1,7 @@
 import React from "react";
 import { Breadcrumb, Notification } from "rbx";
 import { Link } from "react-router-dom";
+import "./Breadcrumb.css";
 
 function BreadcrumbNav(props) {
   return (
