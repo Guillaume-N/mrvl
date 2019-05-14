@@ -1,6 +1,6 @@
+import API_PUBLIC_KEY from "./API_KEY.js";
 const API_URL = "https://gateway.marvel.com:443/v1/public";
 const API_CHARACTERS_URL = `${API_URL}/characters`;
-const API_PUBLIC_KEY = "efb66278d4bcec36f0534964c3073436";
 const API_PUBLIC_KEY_STRING = `&apikey=${API_PUBLIC_KEY}`;
 
 const getCharacters = (orderBy = "name", limit = 100, offset = 0) => {
