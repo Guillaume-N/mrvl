@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Column, Notification, Title, Section } from "rbx";
 
 function CharacterImageAndDescription(props) {
@@ -22,5 +23,10 @@ function CharacterImageAndDescription(props) {
     </Column>
   );
 }
+
+CharacterImageAndDescription.propTypes = {
+  character: PropTypes.object.isRequired,
+  imgUrl: PropTypes.string.isRequired
+};
 
 export default CharacterImageAndDescription;
