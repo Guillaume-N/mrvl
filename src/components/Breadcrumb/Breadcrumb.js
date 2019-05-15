@@ -9,7 +9,7 @@ function Breadcrumb(props) {
     <Column size={props.size}>
       <Notification className="breadcrumb-nav">
         <BulmaBreadcrumb separator="arrow" size="medium">
-          <BulmaBreadcrumb.Item>
+          <BulmaBreadcrumb.Item as="span">
             <Link to={`/`}>Home</Link>
           </BulmaBreadcrumb.Item>
           <BulmaBreadcrumb.Item active>{props.text}</BulmaBreadcrumb.Item>
