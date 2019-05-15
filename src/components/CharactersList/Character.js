@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Column, Section, Title } from "rbx";
 import { Link } from "react-router-dom";
 import "./Character.css";
@@ -24,6 +25,10 @@ const Character = props => {
       </Link>
     </Column>
   );
+};
+
+Character.propTypes = {
+  character: PropTypes.object.isRequired
 };
 
 export default Character;

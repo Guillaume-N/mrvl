@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Column, Notification, Title } from "rbx";
 
 function CharacterComics(props) {
@@ -31,5 +32,9 @@ function CharacterComics(props) {
     </Column>
   );
 }
+
+CharacterComics.propTypes = {
+  character: PropTypes.object.isRequired
+};
 
 export default CharacterComics;

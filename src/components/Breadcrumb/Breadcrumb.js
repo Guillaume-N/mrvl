@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Breadcrumb as BulmaBreadcrumb, Notification, Column } from "rbx";
 import { Link } from "react-router-dom";
 import "./Breadcrumb.css";
@@ -17,5 +18,12 @@ function Breadcrumb(props) {
     </Column>
   );
 }
+Breadcrumb.propTypes = {
+  size: PropTypes.number
+};
+
+Breadcrumb.defaultProps = {
+  size: 12
+};
 
 export default Breadcrumb;
