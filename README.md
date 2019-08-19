@@ -1,7 +1,8 @@
 # mrvl - test technique
 
 Ce projet est le résultat d'un test technique qui m'a été demandé. Le sujet était :
-```A partir de l'[API Marvel](https://developer.marvel.com/), affichez une liste de 20 personnages à partir du centième. Chaque item de la liste doit avoir le nom du personnage et son image et un clic sur son nom doit afficher le détail du personnage avec les informations suivantes : name / description / image / le nombre de comics où le personnage apparait / les titres des 3 premiers comics où le personnage apparaît.```
+
+A partir de l'[API Marvel](https://developer.marvel.com/), affichez une liste de 20 personnages à partir du centième. Chaque item de la liste doit avoir le nom du personnage et son image et un clic sur son nom doit afficher le détail du personnage avec les informations suivantes : name / description / image / le nombre de comics où le personnage apparait / les titres des 3 premiers comics où le personnage apparaît.
 
 ## Technologies
 
