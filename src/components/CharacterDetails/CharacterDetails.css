@@ -1,0 +1,27 @@
+.box-character,
+.box-character-comics {
+  font-family: "Titillium Web", sans-serif;
+  color: #fff;
+  background: rgba(81, 140, 202, 0.8);
+}
+
+.column-group {
+  margin: 10px;
+}
+
+.details-main-title,
+.number-of-comics {
+  color: #ffc107 !important;
+}
+
+.character-image-container {
+  margin: 0 auto;
+  text-align: center;
+}
+.character-image {
+  border-radius: 10px;
+}
+
+.comics-list {
+  text-indent: 1rem;
+}

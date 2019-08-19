@@ -1,0 +1,13 @@
+.header {
+  font-family: "Titillium Web", sans-serif;
+  background: #f44336 !important;
+}
+
+.main-title {
+  font-size: 4rem;
+  letter-spacing: -5pt;
+}
+
+.subtitle {
+  letter-spacing: 1.5pt;
+}

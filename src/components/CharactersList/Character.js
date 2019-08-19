@@ -1,7 +1,8 @@
 import React from "react";
-import { Column, Notification, Title } from "rbx";
-
+import PropTypes from "prop-types";
+import { Column, Section, Title } from "rbx";
 import { Link } from "react-router-dom";
+import "./Character.css";
 
 const Character = props => {
   const character = props.character;
@@ -9,16 +10,25 @@ const Character = props => {
   return (
     <Column size={3}>
       <Link to={`/character/${character.id}`}>
-        <Notification color="dark" textAlign="centered">
-          <Title size={4}>{character.name}</Title>
-          <p>
-            <img src={imgUrl} alt={character.name} />
-          </p>
-          <p>{character.description}</p>
-        </Notification>
+        <Section className="character">
+          <Title size={3} className="character-name">
+            {character.name}
+          </Title>
+          <div className="character-list-image-container">
+            <img
+              className="character-list-image"
+              src={imgUrl}
+              alt={character.name}
+            />
+          </div>
+        </Section>
       </Link>
     </Column>
   );
+};
+
+Character.propTypes = {
+  character: PropTypes.object.isRequired
 };
 
 export default Character;

@@ -1,0 +1,28 @@
+.character {
+  padding: 1rem !important;
+  font-size: 2rem;
+  letter-spacing: -1pt;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(81, 140, 202, 0.8);
+  border-radius: 5px;
+}
+
+.character:hover {
+  opacity: 0.9;
+}
+
+.character-name {
+  color: #ffc107;
+}
+
+character-list-image-container {
+  margin: 0 auto;
+}
+
+.character-list-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
