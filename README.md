@@ -9,7 +9,7 @@ A partir de l'[API Marvel](https://developer.marvel.com/), affichez une liste de
 Le projet utilise :
 - React et Create-React-App
 - React Router pour le routing
-- [https://www.npmjs.com/package/prop-types](prop-types) et defaultProps pour la validation des props
+- [prop-types](https://www.npmjs.com/package/prop-types) et defaultProps pour la validation des props
 - [rbx](https://dfee.github.io/rbx/), implémentation du framework CSS [Bulma](https://bulma.io/) pour le design
 - [materialuicolors](https://materialuicolors.co/), une palette de couleurs MaterialUI
 - [surge.sh](https://surge.sh/) pour le déploiement
